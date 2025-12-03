@@ -26,7 +26,12 @@ public class MedicationController {
     }
     @PostMapping
     public HttpStatus postNewMedication(@RequestBody Medication medication){
-
+        try{
+            medicationUseCase.createMedication(medication);
+            return  HttpStatus.CREATED;
+        }catch (Exception e){
+            return HttpStatus.BAD_REQUEST;
+        }
     }
 
     @GetMapping("/category/{category}?expiration-after={date}")

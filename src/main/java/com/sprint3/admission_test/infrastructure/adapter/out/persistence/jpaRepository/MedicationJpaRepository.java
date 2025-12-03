@@ -11,4 +11,6 @@ public interface MedicationJpaRepository extends JpaRepository<Medication, Long>
     List<Medication> findByExpirationDate(LocalDate date);
 
     List<Medication> findByCategory(String category);
+
+    void createMedication(Medication medication);
 }

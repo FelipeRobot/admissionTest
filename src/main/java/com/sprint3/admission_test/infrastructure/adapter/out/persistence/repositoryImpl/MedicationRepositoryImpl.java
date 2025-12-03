@@ -29,9 +29,13 @@ public class MedicationRepositoryImpl implements IMedicationRepository {
    }
 
    @Override
-   @ManyToOne
    public List<Medication> findByCategory(Long categoryId){
        return medicationJpaRepository.findByCategory(String.valueOf(categoryId));
    }
+
+    @Override
+    public void createMedication(Medication medication) {
+        medicationJpaRepository.createMedication(medication);
+    }
 
 }
