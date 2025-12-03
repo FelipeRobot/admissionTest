@@ -36,9 +36,6 @@ public class MedicationUseCaseImpl implements IMedicationUseCase {
         found.addAll(foundByDate);
         found.addAll(foundByCategory);
 
-        if(found == null || found.size() == 0){
-
-        }
         return found;
     }
 

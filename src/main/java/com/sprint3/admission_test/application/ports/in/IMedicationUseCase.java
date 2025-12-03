@@ -11,6 +11,5 @@ public interface IMedicationUseCase {
 
     List<Medication> getByCategoryANDdate(Long categoryId, LocalDate date);
 
-
     void createMedication(Medication medication);
 }
